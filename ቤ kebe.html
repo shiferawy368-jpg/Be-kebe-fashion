@@ -1,0 +1,123 @@
+<!-- save as index.html and open in your Android editor (Acode/TreB Edit) -->
+<!doctype html>
+<html lang="am">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BE-Kebe | Fashion</title>
+  <meta name="description" content="BE-Kebe - የወንድ እና የሴት ልብስ (Day & Evening) - Addis Ababa" />
+  <style>
+    :root{--accent:#c0392b;--dark:#222;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",sans-serif;margin:0;color:var(--dark)}
+    header{background:#fff;border-bottom:1px solid #eee;padding:18px 16px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:700;color:var(--accent)}
+    nav a{margin-left:12px;text-decoration:none;color:var(--dark);font-size:14px}
+    .hero{padding:28px 16px;background:linear-gradient(90deg, #fff 0%, #fff 60%), #f7f7f7;display:flex;gap:20px;flex-wrap:wrap}
+    .hero .left{flex:1;min-width:260px}
+    .hero h1{margin:0;font-size:28px}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none}
+    .products{padding:20px 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .card{border:1px solid #eee;padding:10px;border-radius:8px;background:#fff}
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:6px}
+    .card h3{margin:8px 0 4px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    footer{padding:18px 16px;border-top:1px solid #eee;background:#fff;margin-top:18px}
+    .contact{display:flex;flex-direction:column;gap:6px}
+    @media(min-width:800px){ .hero{padding:40px 60px} .hero h1{font-size:36px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">BE-Kebe</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="left">
+      <h1>BE-Kebe — በፋሽን ውበት የተገነባ</h1>
+      <p>የወንድ እና የሴት ልብስ — ቀን እና ሌሊት ለማስተናገድ። እዚህ ከፍ ጥራት እና ቅን እቃዎች ይገኛሉ።</p>
+      <a class="cta" href="#products">View Collection</a>
+    </div>
+    <div class="right">
+      <!-- replace src with product hero photo -->
+      <img src="https://via.placeholder.com/520x360.png?text=BE-Kebe+Fashion" alt="BE-Kebe" style="width:100%;max-width:520px;border-radius:8px">
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 style="padding:16px 16px 0;margin:0">Featured Products</h2>
+    <div class="products">
+      <!-- product 1 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x300.png?text=Men+Outfit+1" alt="">
+        <h3>Men Classic Suit</h3>
+        <p>Price: 3,500 ብር — Size: S,M,L,XL</p>
+      </article>
+
+      <!-- product 2 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x300.png?text=Women+Dress+1" alt="">
+        <h3>Evening Gown</h3>
+        <p>Price: 4,800 ብር — Elegant evening wear</p>
+      </article>
+
+      <!-- product 3 -->
+      <article class="card">
+        <img src="https://via.placeholder.com/400x300.png?text=Casual+Shirt" alt="">
+        <h3>Casual Day Shirt</h3>
+        <p>Price: 900 ብር — Comfortable daily wear</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" style="padding:18px 16px">
+    <h2>About BE-Kebe</h2>
+    <p>BE-Kebe የፋሽን ቤት ሲሆን የተሻለ ጥራት ልብሶችን ለወንዶችና ለሴቶች ይሰጣል። በአዲስ አበባ እንገኛለን (ምልክት አካባቢ)።</p>
+  </section>
+
+  <footer id="contact">
+    <div style="display:flex;flex-direction:column;gap:8px;max-width:900px;margin:auto">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap">
+        <div>
+          <strong>BE-Kebe</strong><br>
+          ስልክ: +251 979 163232<br>
+          Email: <a href="mailto:shiferawy368@gmail.com">shiferawy368@gmail.com</a><br>
+          Address: ምልክት አካባቢ
+        </div>
+        <div style="max-width:320px">
+          <form id="contactForm" class="contact" onsubmit="sendForm(event)">
+            <label>ስም<input name="name" required style="padding:8px;border:1px solid #ddd;border-radius:6px"></label>
+            <label>Email<input name="email" type="email" required style="padding:8px;border:1px solid #ddd;border-radius:6px"></label>
+            <label>Message<textarea name="message" required style="padding:8px;border:1px solid #ddd;border-radius:6px"></textarea></label>
+            <button type="submit" style="padding:10px;border:0;background:var(--accent);color:#fff;border-radius:6px">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #eee;padding-top:10px;font-size:13px;color:var(--muted)">
+        © BE-Kebe — All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function sendForm(e){
+      e.preventDefault();
+      // simple client-side: open mailto (replace with Formspree or backend for production)
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value);
+      const email = encodeURIComponent(f.email.value);
+      const msg = encodeURIComponent(f.message.value);
+      const subject = encodeURIComponent('Contact from website: ' + name);
+      const body = 'Name: '+name + '%0AEmail: '+email + '%0A%0A' + msg;
+      window.location.href = `mailto:shiferawy368@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
